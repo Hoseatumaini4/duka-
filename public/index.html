@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="sw">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Duka Mahiri · Rekodi na Akili ya Biashara</title>
+<meta name="description" content="Rekodi mauzo, stoo, matumizi na madeni ya duka lako, kisha upate taarifa za akili za biashara. Inafanya kazi bila mtandao.">
+<meta name="theme-color" content="#f3f5f2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0c1411" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Duka Mahiri">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h5v-6h4v6h5V10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h2l2.4 11h10.2L20 7H6.2M9 20h.01M17 20h.01" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M3 7.5L12 3l9 4.5v9L12 21l-9-4.5zM3 7.5l9 4.5 9-4.5M12 12v9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z" fill="currentColor"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+</svg>
+
+<header class="top">
+  <button id="backBtn" class="icon-btn hidden" type="button" data-act="back" aria-label="Rudi"><svg width="20" height="20"><use href="#i-back"/></svg></button>
+  <div class="top-title">
+    <h1 id="shopName">Duka Mahiri</h1>
+    <p id="todayLine"></p>
+  </div>
+  <div class="top-actions">
+    <button id="installBtn" class="chip-btn hidden" type="button" data-act="install">Sakinisha</button>
+    <button class="icon-btn" type="button" data-act="mode" aria-label="Badilisha mwonekano (usiku/mchana)"><svg width="20" height="20"><use href="#i-moon"/></svg></button>
+  </div>
+</header>
+
+<main id="view" tabindex="-1"></main>
+
+<nav class="tabbar" aria-label="Menyu kuu">
+  <button type="button" data-act="go" data-to="leo" data-tab="leo"><svg width="22" height="22"><use href="#i-home"/></svg><span>Leo</span></button>
+  <button type="button" data-act="go" data-to="uza" data-tab="uza" class="sell"><svg width="22" height="22"><use href="#i-cart"/></svg><span>Uza</span></button>
+  <button type="button" data-act="go" data-to="stoo" data-tab="stoo"><svg width="22" height="22"><use href="#i-box"/></svg><span>Stoo</span></button>
+  <button type="button" data-act="go" data-to="ripoti" data-tab="ripoti"><svg width="22" height="22"><use href="#i-chart"/></svg><span>Ripoti</span></button>
+  <button type="button" data-act="go" data-to="zaidi" data-tab="zaidi"><svg width="22" height="22"><use href="#i-menu"/></svg><span>Zaidi</span></button>
+</nav>
+
+<div id="sheet" class="sheet-wrap hidden">
+  <div class="sheet-bg" data-act="sheet-close"></div>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+    <div class="sheet-head"><h2 id="sheetTitle"></h2><button type="button" class="icon-btn" data-act="sheet-close" aria-label="Funga"><svg width="20" height="20"><use href="#i-x"/></svg></button></div>
+    <div id="sheetBody" class="sheet-body"></div>
+  </div>
+</div>
+<div id="dialog" class="dialog-wrap hidden"></div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<noscript><p style="padding:24px;text-align:center">Washa JavaScript ili kutumia Duka Mahiri.</p></noscript>
+
+<script src="js/util.js"></script>
+<script src="js/bi.js"></script>
+<script src="js/demo.js"></script>
+<script src="js/db.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/views-main.js"></script>
+<script src="js/views-more.js"></script>
+<script src="js/views-report.js"></script>
+<script src="js/views-hesabu.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

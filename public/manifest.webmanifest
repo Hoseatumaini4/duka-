@@ -1,0 +1,24 @@
+{
+  "name": "Duka Mahiri · Rekodi na Akili ya Biashara",
+  "short_name": "Duka Mahiri",
+  "description": "Rekodi mauzo, stoo, matumizi na madeni ya duka. Taarifa za akili za biashara bila mtandao.",
+  "lang": "sw",
+  "dir": "ltr",
+  "start_url": "./#/leo",
+  "scope": "./",
+  "id": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f2f5f1",
+  "theme_color": "#1f7a4d",
+  "categories": ["business", "finance", "productivity"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Uza", "url": "./#/uza", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Ripoti", "url": "./#/ripoti", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] }
+  ]
+}
