@@ -1,0 +1,11 @@
+{
+  "name": "duka-mahiri",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Rekodi za duka na akili ya biashara, PWA ya nje ya mtandao",
+  "scripts": {
+    "dev": "python3 -m http.server 8080 -d public",
+    "test:gen": "TZ=Africa/Dar_es_Salaam node tests/gen.js /tmp/dm-test",
+    "test:verify": "python3 -I tests/verify.py /tmp/dm-test"
+  }
+}
