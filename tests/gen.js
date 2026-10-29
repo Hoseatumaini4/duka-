@@ -1,5 +1,5 @@
 // Hutengeneza data ya mfano, na kuandika matokeo ya injini ya BI kwa JSON ili yalinganishwe na hesabu huru ya Python.
-const U = require("../public/js/util.js"), BI = require("../public/js/bi.js"), Demo = require("../public/js/demo.js");
+const U = require("../js/util.js"), BI = require("../js/bi.js"), Demo = require("../js/demo.js");
 const fs = require("fs");
 const now = new Date(2026, 9, 27, 15, 20).getTime();       // 27 Okt 2026 15:20 (saa za mahali)
 const data = Demo.generate(now, 20261027);

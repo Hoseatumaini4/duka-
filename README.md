@@ -12,9 +12,9 @@ Programu ya Kiswahili ya kurekodi mauzo, stoo, matumizi na madeni ya duka, na ku
 - **Nakala**: pakua JSON/CSV, rejesha, chapisha PDF.
 
 ## Weka mtandaoni
-Vercel: ingiza repo, hakuna build (`vercel.json` ina `outputDirectory: public`). Netlify: `netlify.toml` iko tayari.
+Vercel: ingiza repo, hakuna build (`vercel.json` ina mizizini (hakuna build)). Netlify: `netlify.toml` iko tayari.
 Jaribu hapa: `npm run dev` kisha fungua http://localhost:8080.
-Badilisha `VERSION` ndani ya `public/sw.js` kila unapobadilisha faili ili watumiaji wapate toleo jipya.
+Badilisha `VERSION` ndani ya `sw.js` kila unapobadilisha faili ili watumiaji wapate toleo jipya.
 
 ## Majaribio
 `npm run test:gen && npm run test:verify`: hutengeneza data ya mfano, na hesabu huru ya Python hulinganishwa na injini ya BI.
@@ -23,4 +23,8 @@ Badilisha `VERSION` ndani ya `public/sw.js` kila unapobadilisha faili ili watumi
 - Hifadhi kwenye kivinjari inaweza kupotea simu ikifutwa au data ya tovuti ikisafishwa: **pakua nakala mara kwa mara**.
 - Makadirio, ushauri na faida ya mauzo ya haraka ni makadirio, si ahadi.
 - Data ya mfano si halisi; ifute kabla ya kuanza.
-- Font: Inter (SIL OFL), leseni kwenye `public/fonts`.
+- Font: Inter (SIL OFL), leseni kwenye `fonts`.
+
+## Muundo
+`index.html`, `css/`, `js/`, `fonts/`, `icons/`, `sw.js`, `manifest.webmanifest` ziko mizizini; `tests/` na `tools/` ni za wasanidi.
+Weka kwenye Vercel: Framework Preset = Other, Build/Output/Root Directory tupu.

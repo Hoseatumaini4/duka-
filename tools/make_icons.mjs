@@ -3,7 +3,7 @@ import { chromium } from "playwright";
 import { writeFileSync, mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-const out = join(dirname(fileURLToPath(import.meta.url)), "..", "public", "icons");
+const out = join(dirname(fileURLToPath(import.meta.url)), "..", "icons");
 mkdirSync(out, { recursive: true });
 function svg({ rounded = true, scale = 1 } = {}) {
   const r = rounded ? 112 : 0;
